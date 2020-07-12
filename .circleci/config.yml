@@ -6,9 +6,6 @@ jobs:
 
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
       - run:sudo pip install jupyter
       - run:sudo pip install numpy
       - run:sudo pip install matplotlib
