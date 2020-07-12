@@ -6,7 +6,7 @@ jobs:
 
     steps:
       - checkout
-      - run:sudo pip install jupyter
+      - run:sudo pip install notebook
       - run:sudo pip install numpy
       - run:sudo pip install matplotlib
       - run:sudo pip install sklearn
