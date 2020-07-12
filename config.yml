@@ -1,0 +1,27 @@
+Version: 2
+jobs:
+  build:
+    working_directory: ~/circleci-python
+    docker:
+      - image: circleci/python:3.6.4
+
+    environment: 
+          PIPENV_VENV_IN_PROJECT: true
+
+    steps:
+      - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - run:
+	  command:
+          sudo pip install jupyter
+          sudo pip install numpy
+          sudo pip install matplotlib
+          sudo pip install sklearn
+          sudo pip install nbconvert
+          jupyter-nbconvert --execute HomeWork1.ipunb
+
+      - store_artifacts:
+         path: /artifacts
+
