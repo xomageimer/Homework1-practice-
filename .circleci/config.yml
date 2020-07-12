@@ -9,14 +9,12 @@ jobs:
       - python/load-cache
       - python/install-deps
       - python/save-cache
-      - run:
-          command: |
-          sudo pip install jupyter
-          sudo pip install numpy
-          sudo pip install matplotlib
-          sudo pip install sklearn
-          sudo pip install nbconvert
-          jupyter-nbconvert --execute HomeWork1.ipunb
+      - run:sudo pip install jupyter
+      - run:sudo pip install numpy
+      - run:sudo pip install matplotlib
+      - run:sudo pip install sklearn
+      - run:sudo pip install nbconvert
+      - run:jupyter-nbconvert --execute HomeWork1.ipunb
 
       - store_artifacts:
          path: ./HomeWork1.html
