@@ -10,7 +10,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command:
+          command: |
           sudo pip install jupyter
           sudo pip install numpy
           sudo pip install matplotlib
