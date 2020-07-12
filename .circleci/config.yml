@@ -11,7 +11,7 @@ jobs:
       - run: sudo pip install matplotlib
       - run: sudo pip install sklearn
       - run: sudo pip install nbconvert
-      - run: jupyter-nbconvert --execute HomeWork1.ipunb
+      - run: jupyter-nbconvert --execute HomeWork1.ipynb
 
       - store_artifacts:
          path: ./HomeWork1.html
